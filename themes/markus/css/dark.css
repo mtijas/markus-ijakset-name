@@ -1,3 +1,18 @@
+/* Apply reasonable defaults */
+* {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/**
+ * Layout
+ */
+
 body {
   background-color: #001927;
   margin: 0;
@@ -7,7 +22,13 @@ body {
   font-family: 'Noto Serif', serif;
 }
 
-h1, h2, h3, h4, h5, h6, #primary-header {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#primary-header {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -35,11 +56,11 @@ h1, h2, h3, h4, h5, h6, #primary-header {
   font-size: 2em;
   margin: 0.5em 0;
   font-family: 'Black Ops One', cursive;
-}  
+}
 
 #site-title a,
 #site-title a:visited {
-  color: #1EA1E8; /* f01a37 */
+  color: #1ea1e8; /* f01a37 */
 }
 
 #site-title span {
@@ -77,6 +98,6 @@ section {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   section {
-    width: 1150px;
+    max-width: 1150px;
   }
 }
