@@ -1,0 +1,82 @@
+body {
+  background-color: #001927;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #fff3cc;
+  font-family: 'Noto Serif', serif;
+}
+
+h1, h2, h3, h4, h5, h6, #primary-header {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Flexbox attributes */
+#primary-header {
+  background-color: #0e2330;
+  border-color: #004973;
+  border-width: 1px;
+  border-style: none none solid none;
+}
+
+#primary-header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#primary-header,
+#primary-header a,
+#primary-header a:visited {
+  color: #fff3cc;
+}
+
+#site-title {
+  font-size: 2em;
+  margin: 0.5em 0;
+  font-family: 'Black Ops One', cursive;
+}  
+
+#site-title a,
+#site-title a:visited {
+  color: #1EA1E8; /* f01a37 */
+}
+
+#site-title span {
+  font-size: 0.6em;
+}
+
+#primary-header a {
+  text-decoration: none;
+}
+
+#primary-header nav ul {
+  padding: 0;
+  margin: 0.7em 0;
+  font-size: 1.2em;
+  list-style-type: none;
+}
+
+#primary-header nav li {
+  display: inline-block;
+  margin: 0.3em;
+}
+
+#primary-header nav li a {
+  padding: 0.7em;
+  background-color: #001826;
+  border-radius: 5px;
+}
+
+section {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  section {
+    width: 1150px;
+  }
+}
