@@ -13,3 +13,5 @@ desktop.ini
 # Composer
 /composer.phar
 /vendor
+
+/materiaalit/vm
