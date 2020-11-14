@@ -9,13 +9,32 @@
   display: none !important;
 }
 
+
+
 /**
  * Layout
  */
 
+#layout {
+  display: grid;
+  margin: 0 5%;
+  grid-template-columns: 1fr minmax(8fr, 1150px) 1fr;
+}
+
+#primary-header section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/**
+ * Common theme rules
+ */
+
 body {
   background-color: #001927;
-  margin: 0;
   font-size: 16px;
   line-height: 1.5em;
   color: #fff3cc;
@@ -32,24 +51,24 @@ h6,
   font-family: 'Roboto', sans-serif;
 }
 
-/* Flexbox attributes */
+
+
+/**
+ * Header
+ */
+
 #primary-header {
   background-color: #0e2330;
   border-color: #004973;
-  border-width: 1px;
+  border-width: 2px;
   border-style: none none solid none;
-}
-
-#primary-header section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #primary-header,
 #primary-header a,
 #primary-header a:visited {
   color: #fff3cc;
+  text-decoration: none;
 }
 
 #site-title {
@@ -65,10 +84,6 @@ h6,
 
 #site-title span {
   font-size: 0.6em;
-}
-
-#primary-header a {
-  text-decoration: none;
 }
 
 #primary-header nav ul {
@@ -89,11 +104,23 @@ h6,
   border-radius: 5px;
 }
 
-section {
+
+
+/**
+ * Content
+ */
+
+/*section {
   padding: 1em;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
+
+
+
+/**
+ * Responsive rules
+ */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {

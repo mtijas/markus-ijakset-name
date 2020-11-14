@@ -22,22 +22,24 @@
     <link rel="stylesheet" href="{{ theme_url }}/css/dark.css">
   </head>
   <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
-    <header id="primary-header">
+    <div id="layout">
+      <header id="primary-header">
+        <section>
+          <p id="site-title"><a href="http://markus.ijakset.name">{{ site_title }}</a></p>
+          <nav>
+            <ul>
+              {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                <li{% if page.id == current_page.id %} class="active"{% endif %}>
+                  <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </section>
+      </header>
       <section>
-        <p id="site-title"><a href="http://markus.ijakset.name">{{ site_title }}</a></p>
-        <nav>
-          <ul>
-            {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
-              <li{% if page.id == current_page.id %} class="active"{% endif %}>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
+        {{ content }}
       </section>
-    </header>
-    <section>
-      {{ content }}
-    </section>
+    </div>
   </body>
 </html>
