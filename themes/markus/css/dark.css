@@ -26,7 +26,7 @@ body {
     'header header header'
     'left-panel content right-panel'
     'footer footer footer';
-  grid-template-columns: auto minmax(1fr, 1150px) auto;
+  grid-template-columns: 1fr 1150px 1fr;
   grid-template-rows: auto 1fr auto;
 }
 
