@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1150px;
+  max-width: 80em;
   margin: 0 auto;
 }
 
@@ -496,6 +496,6 @@ button::-moz-focus-inner {
 /* 1312 px */
 @media (min-width: 82em) {
   #layout {
-    grid-template-columns: 1fr 1150px 1fr;
+    grid-template-columns: 1fr 80em 1fr;
   }
 }
