@@ -460,11 +460,7 @@ button::-moz-focus-inner {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  #layout {
-    grid-template-columns: 1fr 20fr 1fr;
-  }
-
+@media (max-width: 43em) {
   .image.xsmall {
     width: 60%;
   }
@@ -483,11 +479,22 @@ button::-moz-focus-inner {
 }
 
 /**
- * Responsive rules
+ * Responsive layout rules
  */
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* 688px on 16px font size */
+@media (min-width: 43em) {
+  #layout {
+    grid-template-columns: 1fr 20fr 1fr;
+  }
+}
+
+/* 992 px */
+@media (min-width: 62em) {
+}
+
+/* 1312 px */
+@media (min-width: 82em) {
   #layout {
     grid-template-columns: 1fr 1150px 1fr;
   }
