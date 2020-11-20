@@ -473,6 +473,7 @@ button::-moz-focus-inner {
 
 .image img {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   border-radius: 0.5em;
   border: solid 0.5em #333333;
