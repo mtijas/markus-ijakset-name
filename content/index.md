@@ -5,15 +5,16 @@ Description: Markus' personal website
 
 <section class="flex">
 
-<article>
-# Tervetuloa
-Moi! Olen Markus, turkulainen it-ammattilainen, jonka intohimoina ovat verkkoasioiden ja tietotekniikan lisäksi valokuvaus ja luonto. Sen enempää itsestäni puhumatta, tervetuloa, toivottavasti löydät täältä jotain mielenkiintoista.
-</article>
-
-<picture>
-  <source media="(max-width: 43em)" type="image/webp" srcset="/assets/img/moon-haze-small.webp">
-  <source media="(min-width: 44em)" type="image/webp" srcset="/assets/img/moon-haze-big.webp">
-  <img src="/assets/img/moon-haze-big.jpg" alt="Moon over the field in the evening.">
-</picture>
+  <article>
+  # Tervetuloa
+  Moi! Olen Markus, turkulainen it-ammattilainen, jonka intohimoina ovat verkkoasioiden ja tietotekniikan lisäksi valokuvaus ja luonto. Sen enempää itsestäni puhumatta, tervetuloa, toivottavasti löydät täältä jotain mielenkiintoista.
+  </article>
+  <section>
+    <picture>
+      <source media="(max-width: 43em)" type="image/webp" srcset="/assets/img/moon-haze-small.webp">
+      <source media="(min-width: 44em)" type="image/webp" srcset="/assets/img/moon-haze-big.webp">
+      <img src="/assets/img/moon-haze-big.jpg" alt="Moon over the field in the evening.">
+    </picture>
+  </section>
 
 </section>
