@@ -142,7 +142,7 @@ hr {
 
 #content-section .flex {
   display: flex;
-  flex-wrap: row wrap;
+  flex-flow: row wrap;
 }
 
 #content-section .flex > * {
@@ -501,7 +501,7 @@ button::-moz-focus-inner {
   .image.large {
     max-width: 100%;
   }
-  
+
   .image.float-left,
   .image.float-right {
     float: none;
