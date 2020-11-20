@@ -140,6 +140,15 @@ hr {
   margin-top: 0;
 }
 
+#content-section .flex {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+#content-section .flex > * {
+  flex: 1;
+}
+
 /**
  * Footer
  */
