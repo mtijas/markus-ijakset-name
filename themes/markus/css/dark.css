@@ -483,8 +483,7 @@ button::-moz-focus-inner {
   position: relative;
   width: calc(100% - 1em);
   text-align: center;
-  height: 3em;
-  vertical-align: middle;
+  padding: 1em 0;
   background-color: #333333cc;
   bottom: 3.5em;
   left: 0.5em;
