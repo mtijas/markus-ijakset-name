@@ -421,12 +421,15 @@ button::-moz-focus-inner {
 .align-left {
   text-align: left;
 }
+
 .align-center {
   text-align: center;
 }
+
 .align-right {
   text-align: right;
 }
+
 .align-justify {
   text-align: justify;
 }
@@ -435,27 +438,43 @@ button::-moz-focus-inner {
   display: block;
   margin: 0 auto;
 }
+
 .image.small {
   max-width: 20%;
 }
+
 .image.medium {
   max-width: 50%;
 }
+
 .image.large {
   max-width: 80%;
 }
+
 .image.float-left {
   float: left;
   margin: 1em 2em 1em 0;
 }
+
 .image.float-right {
   float: right;
   margin: 1em 0 1em 2em;
 }
+
 .image img {
   display: block;
   width: 100%;
 }
+
+.no-top-margin {
+  margin-top: 0;
+}
+
+
+
+/**
+ * Responsive layout rules
+ */
 
 @media (max-width: 43em) {
   .image.small {
@@ -471,10 +490,6 @@ button::-moz-focus-inner {
     margin: 1em auto;
   }
 }
-
-/**
- * Responsive layout rules
- */
 
 /* 688px on 16px font size */
 @media (min-width: 43em) {
