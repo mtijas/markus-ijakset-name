@@ -479,13 +479,17 @@ button::-moz-focus-inner {
   border: solid 0.5em #333333;
 }
 
-.image figcaption {
+.figure {
   position: relative;
+}
+
+.image figcaption {
+  position: absolute;
   width: calc(100% - 1em);
   text-align: center;
   padding: 0.5em 0 0.5em 0;
   background-color: #333333cc;
-  bottom: 3.5em;
+  bottom: 0;
   left: 0.5em;
 }
 
