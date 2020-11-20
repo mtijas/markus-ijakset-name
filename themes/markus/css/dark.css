@@ -59,7 +59,7 @@ body {
   background-color: #000a0f; /* 001927 */
 }
 
-img {
+img, picture {
   max-width: 100%;
 }
 
