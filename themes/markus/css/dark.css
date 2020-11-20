@@ -141,6 +141,7 @@ hr {
 }
 
 #content-section .flex {
+  display: flex;
   flex-flow: row wrap;
 }
 
