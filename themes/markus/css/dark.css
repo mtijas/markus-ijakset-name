@@ -140,16 +140,6 @@ hr {
   margin-top: 0;
 }
 
-#content-section .flex {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-#content-section .flex > * {
-  flex: 1;
-  max-width: 50%;
-}
-
 /**
  * Footer
  */
