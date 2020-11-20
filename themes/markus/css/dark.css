@@ -479,7 +479,7 @@ button::-moz-focus-inner {
   border: solid 0.5em #333333;
 }
 
-.figure {
+figure {
   position: relative;
 }
 
