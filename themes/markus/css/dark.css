@@ -479,6 +479,14 @@ button::-moz-focus-inner {
   border: solid 0.5em #333333;
 }
 
+.image figcaption {
+  width: 100%;
+  text-align: center;
+  height: 3em;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .no-top-margin {
   margin-top: 0 !important;
 }
