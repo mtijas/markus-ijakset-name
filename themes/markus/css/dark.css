@@ -447,6 +447,8 @@ button::-moz-focus-inner {
 .image {
   display: block;
   margin: 0 auto;
+  border-radius: 0.5em;
+  border: solid 0.5em #222222;
 }
 
 .image.small {
