@@ -480,12 +480,14 @@ button::-moz-focus-inner {
 }
 
 .image figcaption {
+  position: relative;
   width: calc(100% - 1em);
   text-align: center;
   height: 3em;
   vertical-align: middle;
   background-color: rgba(255, 255, 255, 0.8);
   bottom: -3.5em;
+  left: 0.5em;
 }
 
 .no-top-margin {
