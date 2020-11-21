@@ -489,7 +489,7 @@ figure {
   text-align: center;
   padding: 0.5em 0 0.5em 0;
   background-color: #333333cc;
-  bottom: 0;
+  bottom: 0.5em;
   left: 0.5em;
 }
 
