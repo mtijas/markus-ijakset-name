@@ -90,8 +90,8 @@ hr {
 }
 
 #site-title {
-  font-size: 2em;
-  margin: 0.5em 0;
+  font-size: 1em;
+  margin: 0.1em 0;
   font-family: 'Black Ops One', cursive;
 }
 
@@ -100,24 +100,20 @@ hr {
   color: #1ea1e8; /* f01a37 */
 }
 
-#site-title span {
-  font-size: 0.6em;
-}
-
 #primary-header nav ul {
   padding: 0;
-  margin: 0.7em 0;
-  font-size: 1.2em;
+  margin: 0.1em 0;
+  font-size: 1em;
   list-style-type: none;
 }
 
 #primary-header nav li {
   display: inline-block;
-  margin: 0.3em;
+  margin: 0.1em;
 }
 
 #primary-header nav li a {
-  padding: 0.7em;
+  padding: 0.1em;
   background-color: #001826;
   border-radius: 5px;
 }
@@ -529,10 +525,50 @@ figure {
   #layout {
     grid-template-columns: 1fr 20fr 1fr;
   }
+
+  #site-title {
+    font-size: 1.5em;
+    margin: 0.3em 0;
+  }
+
+  #primary-header nav ul {
+    padding: 0;
+    margin: 0.3em 0;
+  }
+  
+  #primary-header nav li {
+    margin: 0.15em;
+  }
+  
+  #primary-header nav li a {
+    padding: 0.3em;
+  }
 }
 
 /* 992 px */
 @media (min-width: 62em) {
+  #content-section .flex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #site-title {
+    font-size: 2em;
+    margin: 0.5em 0;
+  }
+
+  #primary-header nav ul {
+    margin: 0.7em 0;
+    font-size: 1.2em;
+  }
+  
+  #primary-header nav li {
+    margin: 0.3em;
+  }
+  
+  #primary-header nav li a {
+    padding: 0.7em;
+  }
 }
 
 /* 1312 px */
