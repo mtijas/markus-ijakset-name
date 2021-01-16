@@ -13,6 +13,7 @@ desktop.ini
 # Composer
 /composer.phar
 /vendor
+composer.lock
 
 /materiaalit/vm
 /config/config.yml
