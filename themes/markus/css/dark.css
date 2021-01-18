@@ -193,6 +193,23 @@ h6,
   font-family: 'Playfair Display', serif;
 }
 
+h1 {
+  font-size: 1.6em;
+  border-color: #0e2330;
+  border-width: 4px;
+  border-style: none none solid none;
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 #content-section h1,
 #content-section h2,
 #content-section h3,
@@ -504,6 +521,7 @@ figure {
   left: 0.5em;
 }
 
+article > *:first-child,
 .no-top-margin {
   margin-top: 0 !important;
 }
