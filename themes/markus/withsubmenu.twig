@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ theme_url }}/css/dark.css">
   </head>
   <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
-    <div id="layout">
+    <div id="layout-sidebar">
       <header id="primary-header">
         <section>
           <p id="site-title"><a href="http://markus.ijakset.name">{{ site_title }}</a></p>
@@ -40,6 +40,29 @@
       <section id="content-section">
         {{ content }}
       </section>
+      <nav id="sidebar">
+        <h3>Navigaatio</h3>
+        {% macro tree(parent) %}
+          {% import _self as utils %}
+          {% for child in parent.children %}
+            <li{% if page.id == current_page.id %} class="active"{% endif %}>
+              {% if child.page %}
+                <a href="{{ child.page.url }}">{{ child.page.title }}</a>
+              {% endif %}
+              {% if child.children %}
+                <ul>
+                  {{ utils.tree(child) }}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        {% endmacro %}
+
+        <ul>
+          {% import _self as utils %}
+          {{ utils.tree(pages["index"].tree_node) }}
+        </ul>
+      </nav>
       <footer id="site-footer">
         <p>&copy; Markus Ijäs</p>
       </footer>
