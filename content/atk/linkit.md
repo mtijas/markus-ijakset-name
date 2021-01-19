@@ -27,4 +27,11 @@ Template: withsubmenu
       <li><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a> - HTML-standardin eloisa versio</li>
     </ul>  
   </p>
+
+  <h2>Tyylioppaat</h2>
+  <p>
+    <ul>
+      <li><a href="https://google.github.io/styleguide/htmlcssguide.html">Google HTML/CSS -tyyliopas</a></li>
+    </ul>
+  </p>
 </article>
