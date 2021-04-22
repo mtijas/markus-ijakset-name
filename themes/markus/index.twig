@@ -24,7 +24,7 @@
   <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     <div id="layout">
       <header id="primary-header">
-        <section>
+        <div>
           <p id="site-title"><a href="http://markus.ijakset.name">{{ site_title }}</a></p>
           <nav>
             <ul>
@@ -35,7 +35,7 @@
               {% endfor %}
             </ul>
           </nav>
-        </section>
+        </div>
       </header>
       <article id="content-section">
         {{ content }}
