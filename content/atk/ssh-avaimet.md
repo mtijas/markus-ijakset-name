@@ -1,4 +1,12 @@
+---
+Title: SSH-avaimet GitHubista
+Description: SSH-avainten haku omalta GitHub-tililtäsi
+Template: withsubmenu
+---
+
 # SSH-avaimet OpenSSH:n ymmärtämällä tavalla
+
+Pieni muistilista OpenSSH-avainten hakuun GitHub-tililtäsi etäkoneelle kirjautumista varten.
 
 Oletan, että olet sen käyttäjän kotihakemistossa jolle haluat avaimet lisätä. Oletan myös sinun olevan kirjautuneena tänä käyttäjänä. Jollet ole: *cd*, *sudo* ja *chown* auttanevat sopivissa kohden käytettyinä.
 
