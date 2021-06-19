@@ -75,7 +75,25 @@ First cut the line with `subvol=@rootfs` with `ctrl+K` and paste it twice with `
 
 You might also want to add options `ssd,noatime,space_cache,commit=120,compress=zstd` to both of the lines. Example fstab file is seen below:
 
-[fstab]
+```
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/nvme0n1p2 during installation
+UUID=22f44acd-bff8-43e5-86aa-c5111cdc7282 /               btrfs   defaults,subvol=@rootfs/@,ssd,noatime,space_cache,commit=120,compress=zstd 0       0
+UUID=22f44acd-bff8-43e5-86aa-c5111cdc7282 /home               btrfs   defaults,subvol=@rootfs/@home,ssd,noatime,space_cache,commit=120,compress=zstd 0       0
+# /boot/efi was on /dev/nvme0n1p1 during installation
+UUID=ED54-669B  /boot/efi       vfat    umask=0077      0       1
+# swap was on /dev/nvme0n1p3 during installation
+UUID=022f597e-4fb8-4fdc-8b11-866ffa8e46f1 none            swap    sw              0       0
+```
 
 Now we need to change to `/` directory, unmount the target and remount the `@` subvolume in it's place. We would also mount the efi again, and the `@home` subvolume inside `/target/home`:
 ```
