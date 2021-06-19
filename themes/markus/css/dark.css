@@ -285,13 +285,13 @@ pre {
 }
 
 code {
-    border: none none none solid;
+    border-style: none none none solid;
     border-width: 5px;
     border-color: #B53505;
 }
 
 pre code {
-    border: none none none none;
+    border-style: none none none none;
 }
 
 abbr {
