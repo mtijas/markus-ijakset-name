@@ -275,8 +275,6 @@ pre, code {
     font-family: monospace;
     background-color: #070707;
     padding: 2px;
-    border-style: none solid none solid;
-    border-width: 1px;
     border-color: #B53505;
 }
 
@@ -287,6 +285,11 @@ pre {
   overflow: auto;
   border-width: 5px;
   border-style: none none none solid;
+}
+
+code {
+    border-style: none none solid none;
+    border-width: 1px;
 }
 
 pre code {
