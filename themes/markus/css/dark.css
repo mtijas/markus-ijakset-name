@@ -272,9 +272,12 @@ blockquote p:first-child {
 }
 
 pre, code {
-  font-family: monospace;
-  background-color: #070707;
-  padding: 2px;
+    font-family: monospace;
+    background-color: #070707;
+    padding: 2px;
+    border-style: none solid none solid;
+    border-width: 1px;
+    border-color: #B53505;
 }
 
 pre {
@@ -282,16 +285,12 @@ pre {
   border-radius: 0.3em;
   padding: 10px;
   overflow: auto;
-}
-
-code {
-    border-style: none none none solid;
-    border-width: 1px;
-    border-color: #B53505;
+  border-width: 5px;
+  border-style: none none none solid;
 }
 
 pre code {
-    border-style: solid none none solid;
+    border-style: none none none none;
 }
 
 abbr {
