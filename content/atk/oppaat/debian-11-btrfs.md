@@ -10,19 +10,42 @@ This is a small guide on how to install Debian Bullseye with separate btrfs subv
 
 I'll also expect you to know what you are doing since we will do many (potentially) destructive changes in this guide. It's on you if you brick your computer with this guide. That said, hope you find this guide helpful.
 
+## Starting the installation
+
 Start the install with:
 
 Advanced options... Expert install (or Expert graphical install)
 
 Continue the installation normally until you get to the disk partitioning step. Once there *do not* continue with the default selection, but select `Manual` partitioning method instead.
 
+## Preliminary partitioning of the target disk
+
 We'll install Debian on the /dev/nvme0n1 SSD which I've already emptied by selecting every partition one by one and removed by pressing `[enter]` and selecting `Delete the partition`. That gives us a nice clean disk to work on.
 
-Once the disk is emptied select the `FREE SPACE` under the Intel SSD (with pressing `enter`) and use the `Automatically partition the free space` tool to let Debian build basic partition structure which we'll modify later (basically we'll leave swap and ESP partitions in their default state. Power users might want to do this differently.). Select `All files in one partition` scheme once the tool asks for it.
+
+<figure class="image">
+  <picture>
+    <img src="/assets/img/atk/oppaat/empty-disk.jpg" alt="Emptied INTEL SSD with other disks shown also.">
+  </picture>
+  <figcaption>Phase 1: Empt(y/ied) disk in the partitioning tool</figcaption>
+</figure>
+
+Once the disk is emptied select the `FREE SPACE` under the Intel SSD and use the `Automatically partition the free space` tool to let Debian build basic partition structure which we'll modify later (basically we'll leave swap and ESP partitions in their default state. Power users might want to do this differently.). Select `All files in one partition` scheme once the tool asks for it.
+
+<figure class="image">
+  <picture>
+    <img src="/assets/img/atk/oppaat/disk-after-auto-partitioning.jpg" alt="Automatically partitioned INTEL SSD with other disks shown also.">
+  </picture>
+  <figcaption>Phase 2: Disk after automatic partitioning</figcaption>
+</figure>
 
 *Do not* finish the partitioning once the tool returns to the disks view. We still need to do some modifications to the root partition (selected in the image below). 
 
-Select the root partition and modify it to use btrfs as file system, and opt to format the partition. Select *Done setting up the partition* to actually store the changes. Now we need to write the changes to disk by selecting `Finish partitioning and write changes to disk`.
+## Necessary partition modifications
+
+Select the root partition (partition #2 in the image above) and modify it to use btrfs as file system, and opt to format the partition. Select *Done setting up the partition* to actually store the changes. Now we need to write the changes to disk by selecting `Finish partitioning and write changes to disk`.
+
+## Subvolume creation
 
 Next we need to open the shell to do some more modifications, so select `Execute a shell` to start a shell. Debian has now mounted the new root partition as `/target`. Move into that directory with `cd /target`. Once there you might want to list current btrfs subvolumes with `btrfs subvol list .`. There should be one subvolume with path `@rootfs` and `level 5`. 
 
@@ -36,11 +59,15 @@ The subvolume `@` will be mounted on `/` (root) and `@home` to `/home` eventuall
 
 Now we need to tell the system that we want the `@` subvolume to be the default subvolume. That can be achieved with command `btrfs subvol set-default 257 .` (remember to change 257 to the ID of the subvolume `@` if it differs from this example).
 
+## Moving things around
+
 Debian installer has already inserted some directories to the `@rootfs` (the default btrfs volume the installer builds). We need to move those directories to the `@` subvolume:
 ```
 mv /target/etc /target/@
 mv /target/media /target/@
 ```
+
+## Modifying fstab
 
 Once the directories are moved we would want to edit the `fstab` fixing the `/` mount point and adding one for `/home`. First start the text editor with `nano /target/@/etc/fstab`.
 
