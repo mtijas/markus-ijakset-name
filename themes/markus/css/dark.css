@@ -286,12 +286,12 @@ pre {
 
 code {
     border-style: none none none solid;
-    border-width: 5px;
+    border-width: 1px;
     border-color: #B53505;
 }
 
 pre code {
-    border-style: none none none none;
+    border-style: solid none none solid;
 }
 
 abbr {
