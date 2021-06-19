@@ -271,16 +271,29 @@ blockquote p:first-child {
   margin-top: 0;
 }
 
+pre, code {
+    font-family: monospace;
+    background-color: #070707;
+    padding: 2px;
+    border-color: #B53505;
+}
+
 pre {
   margin-top: 1em;
-  padding: 10px;
-  background-color: #070707;
   border-radius: 0.3em;
+  padding: 10px;
+  overflow: auto;
+  border-width: 5px;
+  border-style: none none none solid;
 }
 
 code {
-  font-family: monospace;
-  border-radius: 0.3em;
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+pre code {
+    border-style: none none none none;
 }
 
 abbr {
@@ -479,7 +492,7 @@ button::-moz-focus-inner {
 
 .image {
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .image.small {
