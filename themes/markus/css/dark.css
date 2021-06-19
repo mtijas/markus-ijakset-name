@@ -492,7 +492,7 @@ button::-moz-focus-inner {
 
 .image {
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .image.small {
