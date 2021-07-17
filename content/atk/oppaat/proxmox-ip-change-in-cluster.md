@@ -21,3 +21,5 @@ In this guide I'll assume basic proficiency in working in a shell as well as hav
 When everything is in working order feel free to repeat the process to all the other nodes you might want to have new IP addresses.
 
 For more information on the topic I'd suggest to visit [the Proxmox wiki](https://pve.proxmox.com/wiki/Separate_Cluster_Network).
+
+Last updated: 17.07.2021
