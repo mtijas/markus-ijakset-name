@@ -10,7 +10,7 @@ Täältä löydät sekä luomaani materiaalia IT-alan opiskelun ja harrastuksen 
 
 ## Tuoreimpia juttuja
 
-- [Changing the IP address of a Proxmox node](oppaat/proxmox-ip-change-in-cluster)
-- [Debian Bullseye with BTRFS](oppaat/debian-11-btrfs)
+- [Changing the IP address of a Proxmox node](/atk/oppaat/proxmox-ip-change-in-cluster)
+- [Debian Bullseye with BTRFS](/atk/oppaat/debian-11-btrfs)
 
 PS: Joo, tuo ATK on valittu lyhenteeksi ihan tarkoituksella hupailumielessä :).
